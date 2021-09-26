@@ -178,13 +178,13 @@ bool TemmaMount::updateProperties()
         if (InitPark())
         {
             // If loading parking data is successful, we just set the default parking values.
-            SetAxis1ParkDefault(range24(lst + 3 / 60.0));
+            SetAxis1ParkDefault(range24(lst + 6));
             SetAxis2ParkDefault(Latitude >= 0 ? 90 : -90);
         }
         else
         {
             // Otherwise, we set all parking data to default in case no parking data is found.
-            SetAxis1Park(range24(lst + 3 / 60.0));
+            SetAxis1Park(range24(lst + 6));
             SetAxis2Park(Latitude >= 0 ? 90 : -90);
             SetAxis1ParkDefault(range24(lst + 3 / 60.0));
             SetAxis2ParkDefault(Latitude >= 0 ? 90 : -90);
